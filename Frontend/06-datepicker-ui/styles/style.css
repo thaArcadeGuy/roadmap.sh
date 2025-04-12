@@ -1,0 +1,149 @@
+:root {
+  --bgClr: #000000;
+  --mainBgClr: #e5e5e5;
+  --activeDatesClr: #ffffff;
+  --daysClr: #404042;
+  --activeDate: #0084ff;
+  --activePeriodClr: #636366;
+  --timeClr: #1c1c1f;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--mainBgClr);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: 500px;
+  background: var(--bgClr);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.calendar-header,
+.arrow-selection,
+.week_days,
+.calendar-footer,
+.time-container,
+.time-period,
+.weekly_dates {
+  display: flex;
+}
+
+.calendar-header,
+.calendar-footer,
+.weekly_dates {
+  justify-content: space-between;
+}
+
+.calendar-header {
+  align-items: center;
+  margin-inline: 1.4rem;
+}
+
+.week_days {
+  justify-content: space-around;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.month-selection {
+  font-size: 3rem;
+  color: var(--activeDatesClr);
+}
+
+.arrow-selection {
+  font-size: 4rem;
+  gap: 3rem;
+}
+
+span {
+  color: var(--activeDate);
+}
+
+.days {
+  color: var(--daysClr);
+}
+
+.day_date-container {
+  margin-block: 2rem;
+  
+}
+
+button {
+  border: 0;
+  font-size: 3rem;
+  text-align: center;
+  background-color: inherit;
+  color: var(--activeDatesClr);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+}
+
+.current-date {
+  background-color: rgba(0, 132, 255,0.2);
+  color: var(--activeDate);
+
+}
+
+.calendar-footer {
+  font-size: 2.5rem;
+  color: var(--activeDatesClr);
+  margin-inline: 1.4rem;
+  align-items: center;
+}
+
+.time-container {
+  gap: 1.5rem;
+}
+
+.time-period {
+  align-items: center;
+  font-size: 1.5rem;
+  
+}
+
+.time,
+.time-period {
+  background: var(--daysClr);
+  border-radius: 0.75rem;
+}
+
+.time {
+  padding: 0.25rem 1rem;
+}
+
+.time-period {
+  padding: 0 0.25rem;
+}
+
+.before-noon {
+  background: var(--activePeriodClr);
+  border-radius: 0.75rem;
+  padding: 0.55rem 1.5rem;
+}
+
+.after-noon {
+  padding: 0.55rem 1.5rem;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.05);
+}

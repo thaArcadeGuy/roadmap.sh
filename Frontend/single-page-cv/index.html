@@ -45,23 +45,23 @@
 
     <section class="career-history">
       <h2>Experience</h2>
-    <h3>Company Name, Location - Job Title</h3>
-    <p>Month 20xx to Month 20xx</p>
-    <ul>
-      <li>List of achievements</li>
-      <li>List of achievements</li>
-      <li>List of achievements</li>
-    </ul>
-    <p>Skills: List of skills used or gained at this company</p>
+      <h3>Company Name, Location - Job Title</h3>
+      <p>Month 20xx to Month 20xx</p>
+      <ul>
+        <li>List of achievements</li>
+        <li>List of achievements</li>
+        <li>List of achievements</li>
+      </ul>
+      <p>Skills: List of skills used or gained at this company</p>
 
-    <h3>Company Name, Location - Job Title</h3>
-    <p>Month 20xx to Month 20xx</p>
-    <ul>
-      <li>List of achievements</li>
-      <li>List of achievements</li>
-      <li>List of achievements</li>
-    </ul>
-    <p>Skills: List of skills used or gained at this company</p>
+      <h3>Company Name, Location - Job Title</h3>
+      <p>Month 20xx to Month 20xx</p>
+      <ul>
+        <li>List of achievements</li>
+        <li>List of achievements</li>
+        <li>List of achievements</li>
+      </ul>
+      <p>Skills: List of skills used or gained at this company</p>
     </section>
     <h2>Across the Internet</h2>
     <p><a href="https://www.linkedin.com/in/kambere-gilbert-silver/">LinkedIn</a> <a href="https://www.linkedin.com/in/kambere-gilbert-silver/">GitHub</a></p>
@@ -69,5 +69,25 @@
   <footer>
     <p><i>&copy; a guy from kasese</ii></p>
   </footer>
+  <script>
+    let employee = {
+      "name": "Bruce Reese",
+      "email": "diam.sed@augue.org",
+      "company": "Velit Pellentesque Institute"
+    };
+
+    const employeeKeys = Object.keys(employee);
+    console.log(employeeKeys);
+
+    employeeKeys.forEach((key) => console.log(employee[key]));
+    employeeKeys.forEach((key) => {
+      if (key === "company") {
+        employee[key] = "Stiedemann Group"
+      }
+    });
+    console.log(employee);
+
+
+  </script>
 </body>
 </html>

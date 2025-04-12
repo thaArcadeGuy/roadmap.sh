@@ -1,0 +1,327 @@
+:root {
+  --primaryClr: rgb(255, 255, 255);
+  --secondaryClr: rgb(0, 0, 0);
+  --tertiaryClr: rgba(255, 255, 255, 0.4);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  appearance: none;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+fieldset,
+input {
+  border: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+/* Resizing images */
+.img-medium img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user__img-bg img {
+  width: 30rem;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.img-small img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.rating img {
+  width: 2rem;
+}
+
+/* General styling */
+.container {
+  width: 80%;
+  max-width: 750px;
+  margin: 20rem auto;
+}
+
+.container,
+.flex-container {
+  display: flex;
+}
+
+.container {
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.flex-one  {
+  gap: 3.5rem;
+}
+
+.flex-one .black-bg {
+  background: var(--secondaryClr);
+  color: var(--primaryClr);
+  font-size: 1.6rem;
+  padding: 2.5rem 2rem;
+  border-radius: 2rem;
+  
+}
+
+.para {
+  margin-top: 1.6rem;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+
+.position {
+  font-size: 1.4rem
+}
+
+.flex-one .white-bg {
+  font-size: 1.6rem;
+  border: 0.2rem solid var(--secondaryClr);
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.flex-two {
+  gap: 1.5rem;
+}
+
+.user__img-bg img {
+  border-radius: 2rem;
+}
+
+.flex-two .black-bg {
+  background: var(--secondaryClr);
+  color: var(--primaryClr);
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  padding: 3rem;
+  max-width: 46rem;
+}
+
+.rating {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.flex-two .user-details {
+  align-items: flex-start;
+}
+
+.flex-two .user-name {
+  font-size: 3rem;
+  margin-top: 2.5rem;
+}
+
+.flex-two .position {
+  font-size: 1.6rem;
+  color: var(--tertiaryClr);
+  margin-bottom: 2.5rem;
+}
+
+.flex-three {
+  border: 0.2rem solid var(--secondaryClr);
+  border-radius: 2rem;
+  padding: 4rem 8rem;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.img-slide,
+.img-group {
+  display: flex;
+}
+
+.img-slide {
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.img-group {
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2rem;
+  margin-inline: 4rem;
+  margin-block: 4rem 2rem;
+}
+
+.flex-three .user-name {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: 90%;
+    margin: 5rem auto;
+  }
+
+
+  .flex-three {
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    margin: 5rem auto;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-three {
+    padding: 2rem;
+  }
+
+  .user__img-bg img {
+    width: 100%;
+  }
+}
+
+/* .container,
+.flex-container,
+.flex-item
+.user-details,
+.rating,
+.img-slide,
+.img-group {
+  display: flex;
+}
+
+.user-details,
+.flex-three,
+.img-slide,
+.img-group {
+  align-items: center;
+}
+
+.container,
+.col {
+  flex-direction: column;
+}
+
+.container {
+  gap: 3rem;
+}
+
+.flex-one {
+  gap: 3.5rem;
+  flex-grow: 1;
+}
+
+.flex-one .flex-item {
+  gap: 1rem;
+}
+
+.flex-two {
+  gap: 1.5rem
+}
+
+.user-details {
+  gap: 1rem
+}
+
+.black-bg {
+  background: var(--secondaryClr);
+  color: var(--primaryClr);
+}
+
+.white-bg {
+  border: 0.2rem solid var(--secondaryClr);
+}
+
+.black-bg,
+.white-bg,
+.user__img-bg img {
+  border-radius: 2rem;
+}
+
+.testimonial-text p {
+  font-size: 1.6rem;
+}
+
+.user-details .user-name {
+  font-size: 1.8rem;
+}
+
+.position {
+  font-size: 1.4rem;
+}
+
+.flex-one .black-bg {
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+} */
+

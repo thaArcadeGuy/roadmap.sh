@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Form</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="flex-container">
+      <div class="flex-items">
+        <form action="">
+          <div class="full-name">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name" placeholder="Enter Full Name" required>
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter valid email" required>
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter valid password" required>
+          </div>
+          <div class="confirm-password">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="Re-enter password" required>  
+          </div>
+          <button type="submit">Update Profile</button>  
+        </form>
+      </div>
+      <div class="flex-items left-flex">
+        <div class="progress-ring">
+          <progress value="65" min="0" max="100" style="visibility:hidden;height:0;width:0;">65%</progress>
+        </div>
+        <p>Profile Completeness</p>
+        <div class="checklist">
+          <ul class="checklist-items">
+            <li class="checklist-item"><span>Create Account</span></li>
+            <li class="checklist-item"><span>Update Roadmap Progress</span></li>
+            <li class="checklist-item"><span>Setup Public Profile</span></li>
+            <li class="checklist-item">Complete your first project</li>
+            <li class="checklist-item">Invite your Friends</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
